@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC Premium Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>LIC Premium Calculator</h2>
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter your age" required>
+
+        <label for="term">Policy Term (Years):</label>
+        <input type="number" id="term" placeholder="Enter policy term" required>
+
+        <label for="sumAssured">Sum Assured (₹):</label>
+        <input type="number" id="sumAssured" placeholder="Enter sum assured" required>
+
+        <button onclick="calculatePremium()">Calculate Premium</button>
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function calculatePremium() {
+            let age = document.getElementById("age").value;
+            let term = document.getElementById("term").value;
+            let sumAssured = document.getElementById("sumAssured").value;
+            
+            if (age && term && sumAssured) {
+                let basePremium = sumAssured * 0.02; // Example calculation
+                let ageFactor = age * 0.1;
+                let totalPremium = basePremium + ageFactor * term;
+                document.getElementById("result").innerText = "Estimated Premium: ₹" + totalPremium.toFixed(2);
+            } else {
+                document.getElementById("result").innerText = "Please enter all details.";
+            }
+        }
+    </script>
+</body>
+</html>
