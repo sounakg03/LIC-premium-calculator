@@ -1,1 +1,1 @@
-# LIC-premium-calculator
+ LIC Premium Calculator is a convenient tool designed to help individuals estimate the premium amount for their Life Insurance Corporation (LIC) policies. By inputting details such as age, policy term, and sum assured, users can quickly get an estimate of their premium costs. This calculator simplifies the decision-making process for policyholders by providing an approximate cost before purchasing a policy, ensuring better financial planning and understanding of their insurance investments.
